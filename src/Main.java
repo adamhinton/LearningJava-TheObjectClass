@@ -1,15 +1,33 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+// Every class inherits from Object.
+//Frex we could override objects here
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+// this `extends is redundant but we do it for teaching
+public class Main extends Object {
+
+    public static void main(String[] args) {
+        Student max = new Student("Max", 21);
+//        System.out.println(max.toString());
+        System.out.println(max);
+    }
+}
+
+
+class Student {
+
+    private String name;
+    private int age;
+
+    Student (String name, int age){
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+//        return "Student{" +
+//                "name='" + name + '\'' +
+//                ", age=" + age +
+//                '}';
+        return name + " is " + age;
     }
 }
